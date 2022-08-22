@@ -2,8 +2,6 @@ package service.impl;
 
 import java.util.Queue;
 import service.RateLimiter;
-import java.util.LinkedList;
-import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class SlidingWindowRateLimiter implements RateLimiter {

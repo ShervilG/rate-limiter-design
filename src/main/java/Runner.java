@@ -11,16 +11,16 @@ public class Runner {
 
         try {
             for (int i = 0;i < 10;i++) {
-                Thread.sleep(500);
+                Thread.sleep(1000);
                 executorService.submit(() -> {
                     if (rateLimiter.allowRequest()) {
-                        System.out.println("Request allowed");
+                        System.out.println("Request allowed " + System.currentTimeMillis()/1000);
                     } else {
-                        System.out.println("Request rejected");
+                        System.out.println("Request rejected " + System.currentTimeMillis()/1000);
                     }
                 });
             }
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
